@@ -1,0 +1,186 @@
+.youth-page { background: var(--black); }
+
+.youth-hero .band-hero-overlay {
+  background: linear-gradient(180deg, rgba(0,0,0,.08), rgba(0,0,0,.58) 62%, rgba(0,0,0,.82));
+}
+
+.youth-intro .band-intro-rule { background: var(--yellow); }
+
+.section-light {
+  background: var(--white);
+  color: var(--black);
+  padding: 140px 0;
+}
+.section-light .eyebrow { color: rgba(8,8,8,.58); }
+.section-light .section-note { color: rgba(8,8,8,.55); }
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-top: 46px;
+}
+.value-card {
+  min-height: 360px;
+  padding: 28px;
+  border: 1px solid rgba(8,8,8,.14);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform .3s ease, background .3s ease;
+}
+.value-card:hover {
+  transform: translateY(-8px);
+  background: var(--yellow);
+}
+.value-number {
+  font-size: .68rem;
+  letter-spacing: .12em;
+}
+.value-card h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(3.3rem, 6vw, 6rem);
+  line-height: .84;
+  letter-spacing: -.07em;
+}
+.value-card p {
+  max-width: 320px;
+  margin: 0;
+  color: rgba(8,8,8,.66);
+}
+
+.youth-sound { background: var(--black-soft); }
+.youth-sound-copy { order: 1; }
+.youth-sound .sound-feature { order: 2; }
+
+.youth-journey { padding: 150px 0; }
+.journey-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 50px;
+}
+.journey-step {
+  min-height: 390px;
+  padding: 26px;
+  border: 1px solid var(--line);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color .3s ease, background .3s ease, color .3s ease, transform .3s ease;
+}
+.journey-step:hover {
+  transform: translateY(-8px);
+  border-color: var(--yellow);
+}
+.journey-step-feature {
+  background: var(--yellow);
+  color: var(--black);
+  border-color: var(--yellow);
+}
+.journey-step-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: .66rem;
+  letter-spacing: .14em;
+}
+.journey-step:not(.journey-step-feature) .journey-step-top span:first-child { color: var(--yellow); }
+.journey-step h2 {
+  margin: 0;
+  font-family: var(--display);
+  font-weight: 300;
+  font-size: clamp(2.5rem, 4vw, 4.8rem);
+  line-height: .86;
+  letter-spacing: -.065em;
+}
+.journey-step p { margin: 0; color: var(--gray); }
+.journey-step-feature p { color: rgba(8,8,8,.68); }
+
+.youth-numbers { padding-top: 115px; padding-bottom: 135px; }
+.youth-activities { padding-top: 145px; }
+
+.youth-gallery { background: var(--black-soft); }
+.youth-gallery-grid .large { grid-column: span 2; }
+.youth-gallery-grid .tall { min-height: 620px; }
+
+.youth-cta { padding-top: 155px; }
+
+@media (max-width: 900px) {
+  .value-grid { grid-template-columns: 1fr; }
+  .value-card { min-height: 300px; }
+  .journey-grid { grid-template-columns: 1fr 1fr; }
+  .youth-sound-copy { order: 2; }
+  .youth-sound .sound-feature { order: 1; }
+}
+
+@media (max-width: 620px) {
+  .section-light, .youth-journey { padding: 100px 0; }
+  .journey-grid { grid-template-columns: 1fr; }
+  .journey-step { min-height: 300px; }
+  .youth-gallery-grid .large { grid-column: auto; }
+  .youth-gallery-grid .tall { min-height: 430px; }
+}
+
+/* V5 youth-page accents */
+.value-card { position:relative; overflow:hidden; }
+.value-card::after { content:''; position:absolute; width:90px; height:90px; right:-26px; top:-26px; border:1px solid currentColor; border-radius:50%; opacity:.08; }
+.journey-step { position:relative; overflow:hidden; }
+.journey-step::after { content:''; position:absolute; width:180px; height:180px; right:-90px; bottom:-90px; border:1px solid var(--yellow); border-radius:50%; opacity:.16; transition:transform .5s ease; }
+.journey-step:hover::after { transform:scale(1.25); }
+
+
+/* V11: keep hero label clear and give five journey cards enough room */
+.youth-hero .band-hero-content{padding-bottom:18vh;}
+.youth-hero .band-hero-meta{align-items:flex-start;padding-bottom:5vh;}
+.youth-hero .band-hero-meta>.eyebrow{margin-bottom:8px;}
+.journey-grid{grid-template-columns:repeat(5,minmax(0,1fr));}
+.journey-step{min-width:0;}
+@media(max-width:1100px){.journey-grid{grid-template-columns:repeat(3,1fr);}}
+@media(max-width:900px){.journey-grid{grid-template-columns:1fr 1fr}.youth-hero .band-hero-content{padding-bottom:14vh}.youth-hero .band-hero-meta{padding-bottom:3vh}}
+@media(max-width:620px){.journey-grid{grid-template-columns:1fr}.youth-hero .band-hero-content{padding-bottom:10vh}.youth-hero .band-hero-meta{padding-bottom:5vh}}
+
+
+/* V11.1 */
+.youth-hero .band-hero-meta{position:relative;z-index:3;}
+.youth-hero .band-hero-title{position:relative;z-index:2;}
+.journey-grid{grid-template-columns:repeat(5,minmax(0,1fr));}
+.journey-step{overflow:visible;}
+@media(max-width:1100px){.journey-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+@media(max-width:900px){.journey-grid{grid-template-columns:1fr 1fr}.youth-hero .band-hero-meta{padding-bottom:3vh}}
+@media(max-width:620px){.journey-grid{grid-template-columns:1fr}.youth-hero .band-hero-content{padding-bottom:10vh}.youth-hero .band-hero-meta{padding-bottom:6vh}}
+
+
+/* V12 youth hero: keep heading clear while scrolling. */
+.youth-hero .band-hero-title {
+  max-width: min(900px, 78vw);
+  font-size: clamp(2.45rem, 5.7vw, 6.2rem);
+  line-height: 1.03;
+}
+@media (max-width: 900px) {
+  .youth-hero .band-hero-title { max-width: calc(100vw - 48px); font-size: clamp(2.25rem, 8.5vw, 4.8rem); }
+}
+@media (max-width: 620px) {
+  .youth-hero .band-hero-title { max-width: calc(100vw - 36px); font-size: clamp(2rem, 10vw, 3.9rem); }
+}
+
+/* V14 fix: Journey item 05 must use the same text color treatment. */
+.journey-step-feature h2,
+.journey-step-feature h2 em,
+.journey-step-feature h2 span {
+  color: var(--black) !important;
+}
+
+/* Keep the large decorative circles from visually competing with Journey text. */
+.journey-step-feature::after {
+  opacity: .10;
+}
+
+/* V15: all Journey cards use the same interactive treatment; no always-yellow card. */
+.journey-step-feature { background: transparent !important; color: inherit !important; border-color: var(--line) !important; }
+.journey-step-feature:hover { background: var(--yellow) !important; color: var(--black) !important; border-color: var(--yellow) !important; }
+.journey-step-feature p { color: var(--gray) !important; }
+.journey-step-feature:hover p { color: rgba(8,8,8,.68) !important; }
+.journey-step-feature h2 { color: inherit !important; }
