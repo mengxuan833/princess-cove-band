@@ -175,18 +175,11 @@
 }
 
 
-/* V7 header state */
-.site-header.is-scrolled {
-  background: rgba(8,8,8,.72);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-}
+
 .site-header.is-scrolled::after { opacity: .8; }
 .menu-overlay { overscroll-behavior: contain; }
 .menu-links a[aria-current="page"] { color: var(--yellow); }
-@media (max-width: 700px) {
-  .site-header.is-scrolled { background: rgba(8,8,8,.82); }
-}
+
 
 /* V8 menu redesign ------------------------------------------------------- */
 .menu-overlay {
@@ -420,7 +413,7 @@
 
 /* V11 MENU: solid legibility over colourful photography */
 .site-header{z-index:120;mix-blend-mode:normal;background:linear-gradient(180deg,rgba(8,8,8,.76),rgba(8,8,8,0));border-bottom:1px solid rgba(243,243,238,.08);padding:20px 32px;}
-.site-header.is-scrolled{background:rgba(8,8,8,.86);}
+
 .header-controls{display:flex;align-items:center;gap:18px;}
 .language-toggle{order:1;background:transparent;border:0;color:var(--white);padding:7px 0;cursor:pointer;font:500 .68rem/1 var(--body);letter-spacing:.10em;}
 .language-toggle:hover{color:var(--yellow);}

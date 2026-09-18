@@ -21,7 +21,7 @@
 <main id="main-content">
 <section class="band-hero youth-hero">
 <div class="band-hero-media" data-band-hero="">
-<div class="media-placeholder youth-placeholder"><img alt="Youth Band placeholder hero artwork" src="assets/images/youth/hero.JPG"/></div>
+<div class="media-placeholder youth-placeholder"><img alt="Youth Band placeholder hero artwork" src="assets/images/youth/hero.jpg"/></div>
 <div class="band-hero-overlay"></div>
 </div>
 <div class="band-hero-content">
@@ -81,7 +81,7 @@
 </div>
 <div class="sound-grid">
 <div class="sound-copy youth-sound-copy">
-<h2><span data-bilingual="" data-en="Find" data-zh="找到">Find</span><br/><span data-bilingual="" data-en="your" data-zh="你的">your</span><br/><em data-bilingual="" data-en="sound." data-zh="音乐方向。">sound.</em></h2>
+<h2><span data-bilingual="" data-en="Find" data-zh="找到">Find</span><br/><span data-bilingual="" data-en="your" data-zh="属于你的">your</span><br/><em data-bilingual="" data-en="sound." data-zh="音乐方向。">sound.</em></h2>
 <div>
 <p data-bilingual="" data-en="Regular rehearsals, performances and learning experiences help young musicians build confidence and ensemble awareness." data-zh="规律的排练、演出与学习经历，帮助年轻乐手建立自信与合奏意识。">Regular rehearsals, performances and learning experiences help young musicians build confidence and ensemble awareness.</p>
 <div class="sound-tags" style="margin-top:28px;">
@@ -144,7 +144,7 @@
 <div class="activity-list">
 <div class="activity"><span class="activity-index">01</span><span class="activity-title" data-bilingual="" data-en="Rehearsals" data-zh="排练">Weekly Rehearsals</span><span class="activity-arrow">↗</span></div>
 <div class="activity"><span class="activity-index">02</span><span class="activity-title" data-bilingual="" data-en="Concert Performances" data-zh="音乐会演出">Concert Performances</span><span class="activity-arrow">↗</span></div>
-<div class="activity"><span class="activity-index">03</span><span class="activity-title" data-bilingual="" data-en="Band competition" data-zh="乐团比赛">Workshops &amp; Clinics</span><span class="activity-arrow">↗</span></div>
+<div class="activity"><span class="activity-index">03</span><span class="activity-title" data-bilingual="" data-en="Band Competition" data-zh="乐团比赛">Band Competition</span><span class="activity-arrow">↗</span></div>
 <div class="activity"><span class="activity-index">04</span><span class="activity-title" data-bilingual="" data-en="Community Events" data-zh="社区活动">Community Events</span><span class="activity-arrow">↗</span></div>
 </div>
 </div>
@@ -155,10 +155,10 @@
 <p class="eyebrow" data-bilingual="" data-en="08 / Gallery" data-zh="08 / 相册">08 / Gallery</p>
 </div>
 <div class="band-gallery-grid youth-gallery-grid">
-<div class="band-gallery-tile tall media-placeholder youth-placeholder"><img alt="Youth Band first notes placeholder" loading="lazy" src="assets/images/youth/youth01.jpg"/></div>
-<div class="band-gallery-tile large media-placeholder youth-placeholder"><img alt="Youth Band rehearsal placeholder" loading="lazy" src="assets/images/youth/youth02.JPG"/></div>
-<div class="band-gallery-tile media-placeholder"><img alt="Youth Band stage placeholder" loading="lazy" src="assets/images/youth/youth03.jpg"/></div>
-<div class="band-gallery-tile wide media-placeholder youth-placeholder"><img alt="Youth Band together placeholder" loading="lazy" src="assets/images/youth/youth04.jpeg"/></div>
+<div class="youth-gallery-tile youth-gallery-medium media-placeholder youth-placeholder"><img alt="Youth Band first notes placeholder" loading="lazy" src="assets/images/youth/youth01.jpg"/></div>
+<div class="youth-gallery-tile youth-gallery-medium media-placeholder youth-placeholder"><img alt="Youth Band rehearsal placeholder" loading="lazy" src="assets/images/youth/youth02.jpg"/></div>
+<div class="youth-gallery-tile youth-gallery-medium media-placeholder youth-placeholder"><img alt="Youth Band stage placeholder" loading="lazy" src="assets/images/youth/youth03.jpg"/></div>
+<div class="youth-gallery-tile youth-gallery-medium media-placeholder youth-placeholder"><img alt="Youth Band together placeholder" loading="lazy" src="assets/images/youth/youth04.jpeg"/></div>
 </div>
 </div>
 </section>
@@ -189,23 +189,6 @@
 <script>
     if (window.gsap) {
       gsap.registerPlugin(ScrollTrigger);
-      const media = document.querySelector('[data-band-hero]');
-      const title = document.querySelector('[data-band-title]');
-      const line = document.querySelector('.band-hero-scroll .scroll-line');
-
-      if (media && title) {
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: '.band-hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: true
-          }
-        })
-        .to(media, { scale: .88, borderRadius: 22, ease: 'none' }, 0)
-        .to(line, { scaleY: 0, transformOrigin: 'top', ease: 'none' }, 0);
-      }
-
       gsap.utils.toArray('.journey-step, .activity, .band-gallery-tile, .value-card').forEach((el, i) => {
         gsap.from(el, {
           y: 48,

@@ -35,36 +35,24 @@
     .from('.hero-title', { y: 50, opacity: 0, duration: .95 }, .42)
 .from('[data-language-switch]', { y: -10, opacity: 0, duration: .6 }, .26);
 
-  const hero = document.querySelector('.hero');
-  const heroBg = document.querySelector('[data-hero-bg]');
-  const heroTitle = document.querySelector('[data-hero-title]');
-  const selector = document.querySelector('[data-band-selector]');
-  const scrollLine = document.querySelector('.scroll-line');
+const hero = document.querySelector('.hero');
+const selector = document.querySelector('[data-band-selector]');
 
-  if (hero && heroBg && heroTitle) {
-    const heroTl = gsap.timeline({
-      scrollTrigger: {
-        trigger: hero,
-        start: 'top top',
-        end: 'bottom bottom',
-        scrub: 1.1,
-        invalidateOnRefresh: true,
-      }
-    });
+if (hero && selector) {const selectorTl = gsap.timeline({scrollTrigger: {
+      trigger: hero,
+      start: 'top top',
+      end: 'bottom bottom',
+      scrub: 1,
+      invalidateOnRefresh: true
+    }
+  });
 
-    heroTl
-      // Phase 1 — cinematic image pull-back.
-      .to(heroBg, { scale: .80, borderRadius: 20, ease: 'none' }, 0)
-      .to(heroBg.querySelector('img'), { scale: 1.08, filter: 'none', ease: 'none' }, 0)
-      // Phase 2 — title becomes the visual anchor.
-      .set(heroTitle, { clearProps: 'transform,letterSpacing' }, .02)
-            // Phase 3 — band choices gently enter and then remain visible for the rest of the hero.
-      .set(selector, { opacity: 0, y: 28 }, 0)
-      .to(selector, { opacity: 1, y: 0, ease: 'power2.out' }, .32)
-      .to(selector, { opacity: 1, y: 0, ease: 'none' }, 1)
-      .to(scrollLine, { scaleY: 0, transformOrigin: 'top', ease: 'none' }, 0)
-      ;
-  }
+  selectorTl.set(selector, {opacity: 0,y: 28}, 0)
+
+    .to(selector, {opacity: 1,y: 0,ease: 'power2.out'}, 0.32)
+
+    .to(selector, {opacity: 1,y: 0,ease: 'none'}, 1);
+}
 
   // Soft reveal system for content sections.
   gsap.utils.toArray('.reveal-card, .reveal-up').forEach((el, index) => {

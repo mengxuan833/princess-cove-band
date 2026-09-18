@@ -21,7 +21,7 @@
 <main id="main-content">
 <section class="band-hero">
 <div class="band-hero-media" data-band-hero="">
-<div class="media-placeholder master-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band placeholder hero artwork" src="assets/images/master/hero.JPG"/></div>
+<div class="media-placeholder master-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band placeholder hero artwork" src="assets/images/master/hero.jpg"/></div>
 <div class="band-hero-overlay"></div>
 </div>
 <div class="band-hero-content">
@@ -50,12 +50,12 @@
 <div class="container">
 <div class="section-heading-row">
 <p class="eyebrow" data-bilingual="" data-en="03 / The Sound" data-zh="03 / 音乐表现">03 / The Sound</p>
-<p class="section-note" data-bilingual="" data-en="Performance · Precision · Expression" data-zh="精准 · 的演奏">Performance · Precision · Expression</p>
+<p class="section-note" data-bilingual="" data-en="Performance · Precision · Expression" data-zh="精准 · 表现 · 表达">Performance · Precision · Expression</p>
 </div>
 <div class="sound-grid">
 <div class="sound-feature media-placeholder master-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band performance placeholder" loading="lazy" src="assets/images/master/Band00.jpg"/></div>
 <div class="sound-copy">
-<h2 class="master-sound-title"><span data-bilingual="" data-en="Power" data-zh="掌握">Power</span><br/><span data-bilingual="" data-en="with" data-zh="精准的">with</span><br/><em data-bilingual="" data-en="precision." data-zh="演奏">precision.</em></h2>
+<h2 class="master-sound-title"><span data-bilingual="" data-en="Power" data-zh="以精准">Power</span><br/><span data-bilingual="" data-en="with" data-zh="诠释">with</span><br/><em data-bilingual="" data-en="precision." data-zh="力量">precision.</em></h2>
 <div>
 <p data-bilingual="" data-en="The ensemble balances precision, energy and expression across concert repertoire and collaborative performance." data-zh="乐团在音乐会曲目与合作演出中，兼顾精准、能量与表现力。">The ensemble balances precision, energy and expression across concert repertoire and collaborative performance.</p>
 <div class="sound-tags" style="margin-top:28px;">
@@ -109,20 +109,20 @@
 <section class="band-gallery">
 <div class="container">
 <div class="section-heading-row">
-<p class="eyebrow" data-bilingual="" data-en="07 / Gallery" data-zh="07 / 相册">07 / Gallery</p>
+<p class="eyebrow" data-bilingual="" data-en="06 / Gallery" data-zh="06 / 相册">06 / Gallery</p>
 </div>
 <div class="band-gallery-grid">
-<div class="band-gallery-tile large media-placeholder master-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band concert placeholder" loading="lazy" src="assets/images/master/Band01.jpg"/></div>
-<div class="band-gallery-tile media-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band rehearsal placeholder" loading="lazy" src="assets/images/master/Band02.jpg"/></div>
-<div class="band-gallery-tile tall media-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band section placeholder" loading="lazy" src="assets/images/master/Band03.jpg"/></div>
-<div class="band-gallery-tile wide media-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band community placeholder" loading="lazy" src="assets/images/master/Band04.jpg"/></div>
+<div class="band-gallery-tile band-gallery-large media-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band concert placeholder" loading="lazy" src="assets/images/master/Band01.jpg"/></div>
+<div class="band-gallery-tile band-gallery-medium media-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band rehearsal placeholder" loading="lazy" src="assets/images/master/Band02.jpg"/></div>
+<div class="band-gallery-tile band-gallery-medium media-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band section placeholder" loading="lazy" src="assets/images/master/Band03.jpg"/></div>
+<div class="band-gallery-tile band-gallery-wide media-placeholder"><img alt="R &amp; F Princess Cove Opera House Symphonic Band community placeholder" loading="lazy" src="assets/images/master/Band04.jpg"/></div>
 </div>
 </div>
 </section>
 <section class="band-cta section-dark">
 <div class="container band-cta-inner">
 <div class="band-cta-copy">
-<p class="eyebrow" data-bilingual="" data-en="08 / Interested in joining?" data-zh="08 / 有兴趣加入？">08 / Interested in joining?</p>
+<p class="eyebrow" data-bilingual="" data-en="07 / Interested in joining?" data-zh="07 / 有兴趣加入？">07 / Interested in joining?</p>
 <h2 class="display-title"><span data-bilingual="" data-en="Find your place" data-zh="找到属于你的">Find your place</span><br/><em data-bilingual="" data-en="in the R &amp; F Princess Cove Opera House Symphonic Band." data-zh="查丽苏菲雅歌剧院管乐团中的位置。">in the R &amp; F Princess Cove Opera House Symphonic Band.</em></h2>
 <p data-bilingual="" data-en="Interested musicians can use the contact information provided by the organisation to learn more about membership and enquiries." data-zh="有兴趣的乐手可通过网站提供的负责人资讯，了解加入方式及相关咨询。">Interested musicians can use the contact information provided by the organisation to learn more about membership and enquiries.</p>
 </div>
@@ -143,19 +143,5 @@
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
 <script src="js/language.js"></script>
 <script src="js/navigation.js"></script>
-<script>
-    if (window.gsap) {
-      gsap.registerPlugin(ScrollTrigger);
-      const media = document.querySelector('[data-band-hero]');
-      const title = document.querySelector('[data-band-title]');
-      const line = document.querySelector('.band-hero-scroll .scroll-line');
-      gsap.timeline({scrollTrigger:{trigger:'.band-hero',start:'top top',end:'bottom bottom',scrub:1}})
-        .to(media,{scale:.80,borderRadius:18,ease:'none'},0)
-        .to(line,{scaleY:0,transformOrigin:'top',ease:'none'},0);
-      gsap.utils.toArray('.timeline-item, .activity, .band-gallery-tile').forEach((el,i)=>{
-        gsap.from(el,{y:45,opacity:0,duration:.8,ease:'power3.out',scrollTrigger:{trigger:el,start:'top 84%',once:true},delay:(i%4)*.03});
-      });
-    }
-  </script>
 </body>
 </html>
